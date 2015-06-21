@@ -1,0 +1,1804 @@
+INFO::------------ FuseDLS Starts ---------
+INFO::----- Init FuseDLS FS---
+DEBUG::ContactDLS created
+DEBUG::Cache created
+DEBUG::-------- Mount Called ---------
+DEBUG::Mounting the DLS cache
+DEBUG::---- get_responce starts -----
+DEBUG::--- remote path called ----
+DEBUG::Original path:/home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Path after removing mountpoint:/
+DEBUG::Final pathftp://ftp.mozilla.org//
+INFO::Starting new HTTPS connection (1): storkcloud.org
+DEBUG::Setting read timeout to None
+DEBUG::"GET /api/stork/ls?uri=ftp%3A%2F%2Fftp.mozilla.org%2F%2F HTTP/1.1" 200 689
+DEBUG::-------- get_responce returns responce as dict ----
+DEBUG::Converted dictionary values
+{'files': [{u'name': u'.message', u'perm': u'-rw-r--r--', u'file': True, u'time': 1413864000, u'dir': False, u'size': 590}, {u'name': u'README', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 178}, {u'name': u'index.html', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 384}, {u'name': u'pub', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1425620880, u'dir': True, u'size': 0}], 'name': u'/', 'perm': '777', 'file': False, 'time': 0, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::---- Adding mountResponce to cache ----
+DEBUG::adding /home/skaran/CSE710/fuse_mount/dls/ into cache
+DEBUG::@@@@@@ Cache view @@@@@@@@@
+DEBUG::{'/home/skaran/CSE710/fuse_mount/dls/': {'files': [{u'name': u'.message', u'perm': u'-rw-r--r--', u'file': True, u'time': 1413864000, u'dir': False, u'size': 590}, {u'name': u'README', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 178}, {u'name': u'index.html', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 384}, {u'name': u'pub', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1425620880, u'dir': True, u'size': 0}], 'name': u'/', 'perm': '777', 'file': False, 'time': 0, 'dir': True, 'size': 0}}
+DEBUG::File:{u'name': u'.message', u'perm': u'-rw-r--r--', u'file': True, u'time': 1413864000, u'dir': False, u'size': 590}
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'.message', 'perm': u'-rw-r--r--', 'file': True, 'time': 1413864000, 'dir': False, 'size': 590}
+DEBUG::
+
+DEBUG::adding .message into cache
+DEBUG::@@@@@@ Cache view @@@@@@@@@
+DEBUG::{'/home/skaran/CSE710/fuse_mount/dls/': {'files': [{u'name': u'.message', u'perm': u'-rw-r--r--', u'file': True, u'time': 1413864000, u'dir': False, u'size': 590}, {u'name': u'README', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 178}, {u'name': u'index.html', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 384}, {u'name': u'pub', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1425620880, u'dir': True, u'size': 0}], 'name': u'/', 'perm': '777', 'file': False, 'time': 0, 'dir': True, 'size': 0}, u'.message': {'files': None, 'name': u'.message', 'perm': u'-rw-r--r--', 'file': True, 'time': 1413864000, 'dir': False, 'size': 590}}
+DEBUG::File:{u'name': u'README', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 178}
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'README', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 178}
+DEBUG::
+
+DEBUG::adding README into cache
+DEBUG::@@@@@@ Cache view @@@@@@@@@
+DEBUG::{u'README': {'files': None, 'name': u'README', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 178}, '/home/skaran/CSE710/fuse_mount/dls/': {'files': [{u'name': u'.message', u'perm': u'-rw-r--r--', u'file': True, u'time': 1413864000, u'dir': False, u'size': 590}, {u'name': u'README', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 178}, {u'name': u'index.html', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 384}, {u'name': u'pub', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1425620880, u'dir': True, u'size': 0}], 'name': u'/', 'perm': '777', 'file': False, 'time': 0, 'dir': True, 'size': 0}, u'.message': {'files': None, 'name': u'.message', 'perm': u'-rw-r--r--', 'file': True, 'time': 1413864000, 'dir': False, 'size': 590}}
+DEBUG::File:{u'name': u'index.html', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 384}
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'index.html', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 384}
+DEBUG::
+
+DEBUG::adding index.html into cache
+DEBUG::@@@@@@ Cache view @@@@@@@@@
+DEBUG::{u'README': {'files': None, 'name': u'README', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 178}, u'index.html': {'files': None, 'name': u'index.html', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 384}, '/home/skaran/CSE710/fuse_mount/dls/': {'files': [{u'name': u'.message', u'perm': u'-rw-r--r--', u'file': True, u'time': 1413864000, u'dir': False, u'size': 590}, {u'name': u'README', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 178}, {u'name': u'index.html', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 384}, {u'name': u'pub', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1425620880, u'dir': True, u'size': 0}], 'name': u'/', 'perm': '777', 'file': False, 'time': 0, 'dir': True, 'size': 0}, u'.message': {'files': None, 'name': u'.message', 'perm': u'-rw-r--r--', 'file': True, 'time': 1413864000, 'dir': False, 'size': 590}}
+DEBUG::File:{u'name': u'pub', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1425620880, u'dir': True, u'size': 0}
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'pub', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1425620880, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::adding pub into cache
+DEBUG::@@@@@@ Cache view @@@@@@@@@
+DEBUG::{u'README': {'files': None, 'name': u'README', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 178}, u'index.html': {'files': None, 'name': u'index.html', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 384}, '/home/skaran/CSE710/fuse_mount/dls/': {'files': [{u'name': u'.message', u'perm': u'-rw-r--r--', u'file': True, u'time': 1413864000, u'dir': False, u'size': 590}, {u'name': u'README', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 178}, {u'name': u'index.html', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 384}, {u'name': u'pub', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1425620880, u'dir': True, u'size': 0}], 'name': u'/', 'perm': '777', 'file': False, 'time': 0, 'dir': True, 'size': 0}, u'pub': {'files': None, 'name': u'pub', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1425620880, 'dir': True, 'size': 0}, u'.message': {'files': None, 'name': u'.message', 'perm': u'-rw-r--r--', 'file': True, 'time': 1413864000, 'dir': False, 'size': 590}}
+DEBUG::---- mountResponce added to cache
+DEBUG::DLS cache mounted
+INFO::--------- FuseDLS Initialized ----------
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.Trash
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.Trash
+DEBUG::--- cache miss for /home/skaran/CSE710/fuse_mount/dls/.Trash
+DEBUG::---- get_responce starts -----
+DEBUG::--- remote path called ----
+DEBUG::Original path:/home/skaran/CSE710/fuse_mount/dls/.Trash
+DEBUG::Path after removing mountpoint:/.Trash
+DEBUG::Final pathftp://ftp.mozilla.org//.Trash
+INFO::Starting new HTTPS connection (1): storkcloud.org
+DEBUG::Setting read timeout to None
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::/ is directory
+DEBUG::"GET /api/stork/ls?uri=ftp%3A%2F%2Fftp.mozilla.org%2F%2F.Trash HTTP/1.1" 500 48
+DEBUG::-------- get_responce returns responce as dict ----
+DEBUG::Converted dictionary values
+{'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}
+DEBUG::
+
+DEBUG::@@@@@@ Cache view @@@@@@@@@
+DEBUG::{'/home/skaran/CSE710/fuse_mount/dls/.Trash': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, u'index.html': {'files': None, 'name': u'index.html', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 384}, '/home/skaran/CSE710/fuse_mount/dls/': {'files': [{u'name': u'.message', u'perm': u'-rw-r--r--', u'file': True, u'time': 1413864000, u'dir': False, u'size': 590}, {u'name': u'README', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 178}, {u'name': u'index.html', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 384}, {u'name': u'pub', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1425620880, u'dir': True, u'size': 0}], 'name': u'/', 'perm': '777', 'file': False, 'time': 0, 'dir': True, 'size': 0}, u'pub': {'files': None, 'name': u'pub', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1425620880, 'dir': True, 'size': 0}, u'.message': {'files': None, 'name': u'.message', 'perm': u'-rw-r--r--', 'file': True, 'time': 1413864000, 'dir': False, 'size': 590}, u'README': {'files': None, 'name': u'README', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 178}}
+DEBUG::Get stat values
+DEBUG::None is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.xdg-volume-info
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.xdg-volume-info
+DEBUG::--- cache miss for /home/skaran/CSE710/fuse_mount/dls/.xdg-volume-info
+DEBUG::---- get_responce starts -----
+DEBUG::--- remote path called ----
+DEBUG::Original path:/home/skaran/CSE710/fuse_mount/dls/.xdg-volume-info
+DEBUG::Path after removing mountpoint:/.xdg-volume-info
+DEBUG::Final pathftp://ftp.mozilla.org//.xdg-volume-info
+INFO::Starting new HTTPS connection (1): storkcloud.org
+DEBUG::Setting read timeout to None
+DEBUG::"GET /api/stork/ls?uri=ftp%3A%2F%2Fftp.mozilla.org%2F%2F.xdg-volume-info HTTP/1.1" 500 48
+DEBUG::-------- get_responce returns responce as dict ----
+DEBUG::Converted dictionary values
+{'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}
+DEBUG::
+
+DEBUG::@@@@@@ Cache view @@@@@@@@@
+DEBUG::{'/home/skaran/CSE710/fuse_mount/dls/.Trash': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, u'index.html': {'files': None, 'name': u'index.html', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 384}, '/home/skaran/CSE710/fuse_mount/dls/': {'files': [{u'name': u'.message', u'perm': u'-rw-r--r--', u'file': True, u'time': 1413864000, u'dir': False, u'size': 590}, {u'name': u'README', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 178}, {u'name': u'index.html', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 384}, {u'name': u'pub', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1425620880, u'dir': True, u'size': 0}], 'name': u'/', 'perm': '777', 'file': False, 'time': 0, 'dir': True, 'size': 0}, u'pub': {'files': None, 'name': u'pub', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1425620880, 'dir': True, 'size': 0}, u'.message': {'files': None, 'name': u'.message', 'perm': u'-rw-r--r--', 'file': True, 'time': 1413864000, 'dir': False, 'size': 590}, '/home/skaran/CSE710/fuse_mount/dls/.xdg-volume-info': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, u'README': {'files': None, 'name': u'README', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 178}}
+DEBUG::Get stat values
+DEBUG::None is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /autorun.inf
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/autorun.inf
+DEBUG::--- cache miss for /home/skaran/CSE710/fuse_mount/dls/autorun.inf
+DEBUG::---- get_responce starts -----
+DEBUG::--- remote path called ----
+DEBUG::Original path:/home/skaran/CSE710/fuse_mount/dls/autorun.inf
+DEBUG::Path after removing mountpoint:/autorun.inf
+DEBUG::Final pathftp://ftp.mozilla.org//autorun.inf
+INFO::Starting new HTTPS connection (1): storkcloud.org
+DEBUG::Setting read timeout to None
+DEBUG::"GET /api/stork/ls?uri=ftp%3A%2F%2Fftp.mozilla.org%2F%2Fautorun.inf HTTP/1.1" 500 48
+DEBUG::-------- get_responce returns responce as dict ----
+DEBUG::Converted dictionary values
+{'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}
+DEBUG::
+
+DEBUG::@@@@@@ Cache view @@@@@@@@@
+DEBUG::{'/home/skaran/CSE710/fuse_mount/dls/.Trash': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, u'index.html': {'files': None, 'name': u'index.html', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 384}, '/home/skaran/CSE710/fuse_mount/dls/autorun.inf': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, '/home/skaran/CSE710/fuse_mount/dls/': {'files': [{u'name': u'.message', u'perm': u'-rw-r--r--', u'file': True, u'time': 1413864000, u'dir': False, u'size': 590}, {u'name': u'README', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 178}, {u'name': u'index.html', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 384}, {u'name': u'pub', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1425620880, u'dir': True, u'size': 0}], 'name': u'/', 'perm': '777', 'file': False, 'time': 0, 'dir': True, 'size': 0}, u'pub': {'files': None, 'name': u'pub', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1425620880, 'dir': True, 'size': 0}, u'.message': {'files': None, 'name': u'.message', 'perm': u'-rw-r--r--', 'file': True, 'time': 1413864000, 'dir': False, 'size': 590}, '/home/skaran/CSE710/fuse_mount/dls/.xdg-volume-info': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, u'README': {'files': None, 'name': u'README', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 178}}
+DEBUG::Get stat values
+DEBUG::None is file
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.message
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::--- cache miss for /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::---- get_responce starts -----
+DEBUG::--- remote path called ----
+DEBUG::Original path:/home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::Path after removing mountpoint:/.message
+DEBUG::Final pathftp://ftp.mozilla.org//.message
+INFO::Starting new HTTPS connection (1): storkcloud.org
+DEBUG::Setting read timeout to None
+DEBUG::"GET /api/stork/ls?uri=ftp%3A%2F%2Fftp.mozilla.org%2F%2F.message HTTP/1.1" 200 117
+DEBUG::-------- get_responce returns responce as dict ----
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'.message', 'perm': u'-rw-r--r--', 'file': True, 'time': 1413864000, 'dir': False, 'size': 590}
+DEBUG::
+
+DEBUG::@@@@@@ Cache view @@@@@@@@@
+DEBUG::{'/home/skaran/CSE710/fuse_mount/dls/.Trash': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, u'index.html': {'files': None, 'name': u'index.html', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 384}, '/home/skaran/CSE710/fuse_mount/dls/autorun.inf': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, '/home/skaran/CSE710/fuse_mount/dls/.message': {'files': None, 'name': u'.message', 'perm': u'-rw-r--r--', 'file': True, 'time': 1413864000, 'dir': False, 'size': 590}, '/home/skaran/CSE710/fuse_mount/dls/': {'files': [{u'name': u'.message', u'perm': u'-rw-r--r--', u'file': True, u'time': 1413864000, u'dir': False, u'size': 590}, {u'name': u'README', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 178}, {u'name': u'index.html', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 384}, {u'name': u'pub', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1425620880, u'dir': True, u'size': 0}], 'name': u'/', 'perm': '777', 'file': False, 'time': 0, 'dir': True, 'size': 0}, u'pub': {'files': None, 'name': u'pub', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1425620880, 'dir': True, 'size': 0}, u'.message': {'files': None, 'name': u'.message', 'perm': u'-rw-r--r--', 'file': True, 'time': 1413864000, 'dir': False, 'size': 590}, '/home/skaran/CSE710/fuse_mount/dls/.xdg-volume-info': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, u'README': {'files': None, 'name': u'README', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 178}}
+DEBUG::Get stat values
+DEBUG::.message is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.Trash-1000
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.Trash-1000
+DEBUG::--- cache miss for /home/skaran/CSE710/fuse_mount/dls/.Trash-1000
+DEBUG::---- get_responce starts -----
+DEBUG::--- remote path called ----
+DEBUG::Original path:/home/skaran/CSE710/fuse_mount/dls/.Trash-1000
+DEBUG::Path after removing mountpoint:/.Trash-1000
+DEBUG::Final pathftp://ftp.mozilla.org//.Trash-1000
+INFO::Starting new HTTPS connection (1): storkcloud.org
+DEBUG::Setting read timeout to None
+DEBUG::"GET /api/stork/ls?uri=ftp%3A%2F%2Fftp.mozilla.org%2F%2F.Trash-1000 HTTP/1.1" 500 48
+DEBUG::-------- get_responce returns responce as dict ----
+DEBUG::Converted dictionary values
+{'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}
+DEBUG::
+
+DEBUG::@@@@@@ Cache view @@@@@@@@@
+DEBUG::{'/home/skaran/CSE710/fuse_mount/dls/.Trash': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, u'index.html': {'files': None, 'name': u'index.html', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 384}, '/home/skaran/CSE710/fuse_mount/dls/.Trash-1000': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, '/home/skaran/CSE710/fuse_mount/dls/autorun.inf': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, '/home/skaran/CSE710/fuse_mount/dls/.message': {'files': None, 'name': u'.message', 'perm': u'-rw-r--r--', 'file': True, 'time': 1413864000, 'dir': False, 'size': 590}, '/home/skaran/CSE710/fuse_mount/dls/': {'files': [{u'name': u'.message', u'perm': u'-rw-r--r--', u'file': True, u'time': 1413864000, u'dir': False, u'size': 590}, {u'name': u'README', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 178}, {u'name': u'index.html', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 384}, {u'name': u'pub', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1425620880, u'dir': True, u'size': 0}], 'name': u'/', 'perm': '777', 'file': False, 'time': 0, 'dir': True, 'size': 0}, u'pub': {'files': None, 'name': u'pub', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1425620880, 'dir': True, 'size': 0}, u'.message': {'files': None, 'name': u'.message', 'perm': u'-rw-r--r--', 'file': True, 'time': 1413864000, 'dir': False, 'size': 590}, '/home/skaran/CSE710/fuse_mount/dls/.xdg-volume-info': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, u'README': {'files': None, 'name': u'README', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 178}}
+DEBUG::Get stat values
+DEBUG::None is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::--- cache miss for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::---- get_responce starts -----
+DEBUG::--- remote path called ----
+DEBUG::Original path:/home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Path after removing mountpoint:/README
+DEBUG::Final pathftp://ftp.mozilla.org//README
+INFO::Starting new HTTPS connection (1): storkcloud.org
+DEBUG::Setting read timeout to None
+DEBUG::"GET /api/stork/ls?uri=ftp%3A%2F%2Fftp.mozilla.org%2F%2FREADME HTTP/1.1" 200 115
+DEBUG::-------- get_responce returns responce as dict ----
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'README', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 178}
+DEBUG::
+
+DEBUG::@@@@@@ Cache view @@@@@@@@@
+DEBUG::{'/home/skaran/CSE710/fuse_mount/dls/.Trash': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, u'index.html': {'files': None, 'name': u'index.html', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 384}, '/home/skaran/CSE710/fuse_mount/dls/.Trash-1000': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, '/home/skaran/CSE710/fuse_mount/dls/autorun.inf': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, '/home/skaran/CSE710/fuse_mount/dls/.message': {'files': None, 'name': u'.message', 'perm': u'-rw-r--r--', 'file': True, 'time': 1413864000, 'dir': False, 'size': 590}, '/home/skaran/CSE710/fuse_mount/dls/': {'files': [{u'name': u'.message', u'perm': u'-rw-r--r--', u'file': True, u'time': 1413864000, u'dir': False, u'size': 590}, {u'name': u'README', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 178}, {u'name': u'index.html', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 384}, {u'name': u'pub', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1425620880, u'dir': True, u'size': 0}], 'name': u'/', 'perm': '777', 'file': False, 'time': 0, 'dir': True, 'size': 0}, u'pub': {'files': None, 'name': u'pub', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1425620880, 'dir': True, 'size': 0}, u'.message': {'files': None, 'name': u'.message', 'perm': u'-rw-r--r--', 'file': True, 'time': 1413864000, 'dir': False, 'size': 590}, '/home/skaran/CSE710/fuse_mount/dls/.xdg-volume-info': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, u'README': {'files': None, 'name': u'README', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 178}, '/home/skaran/CSE710/fuse_mount/dls/README': {'files': None, 'name': u'README', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 178}}
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::--- cache miss for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::---- get_responce starts -----
+DEBUG::--- remote path called ----
+DEBUG::Original path:/home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Path after removing mountpoint:/index.html
+DEBUG::Final pathftp://ftp.mozilla.org//index.html
+INFO::Starting new HTTPS connection (1): storkcloud.org
+DEBUG::Setting read timeout to None
+DEBUG::"GET /api/stork/ls?uri=ftp%3A%2F%2Fftp.mozilla.org%2F%2Findex.html HTTP/1.1" 200 119
+DEBUG::-------- get_responce returns responce as dict ----
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'index.html', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 384}
+DEBUG::
+
+DEBUG::@@@@@@ Cache view @@@@@@@@@
+DEBUG::{'/home/skaran/CSE710/fuse_mount/dls/.Trash': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, u'index.html': {'files': None, 'name': u'index.html', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 384}, '/home/skaran/CSE710/fuse_mount/dls/.Trash-1000': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, '/home/skaran/CSE710/fuse_mount/dls/autorun.inf': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, '/home/skaran/CSE710/fuse_mount/dls/.message': {'files': None, 'name': u'.message', 'perm': u'-rw-r--r--', 'file': True, 'time': 1413864000, 'dir': False, 'size': 590}, '/home/skaran/CSE710/fuse_mount/dls/': {'files': [{u'name': u'.message', u'perm': u'-rw-r--r--', u'file': True, u'time': 1413864000, u'dir': False, u'size': 590}, {u'name': u'README', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 178}, {u'name': u'index.html', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 384}, {u'name': u'pub', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1425620880, u'dir': True, u'size': 0}], 'name': u'/', 'perm': '777', 'file': False, 'time': 0, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/index.html': {'files': None, 'name': u'index.html', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 384}, u'pub': {'files': None, 'name': u'pub', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1425620880, 'dir': True, 'size': 0}, u'.message': {'files': None, 'name': u'.message', 'perm': u'-rw-r--r--', 'file': True, 'time': 1413864000, 'dir': False, 'size': 590}, '/home/skaran/CSE710/fuse_mount/dls/.xdg-volume-info': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, u'README': {'files': None, 'name': u'README', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 178}, '/home/skaran/CSE710/fuse_mount/dls/README': {'files': None, 'name': u'README', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 178}}
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::--- cache miss for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::---- get_responce starts -----
+DEBUG::--- remote path called ----
+DEBUG::Original path:/home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Path after removing mountpoint:/pub
+DEBUG::Final pathftp://ftp.mozilla.org//pub
+INFO::Starting new HTTPS connection (1): storkcloud.org
+DEBUG::Setting read timeout to None
+DEBUG::"GET /api/stork/ls?uri=ftp%3A%2F%2Fftp.mozilla.org%2F%2Fpub HTTP/1.1" 200 6346
+DEBUG::-------- get_responce returns responce as dict ----
+DEBUG::Converted dictionary values
+{'files': [{u'name': u'.htaccess', u'perm': u'-rw-r--r--', u'file': True, u'time': 1275451200, u'dir': False, u'size': 381}, {u'name': u'OJI', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1023249600, u'dir': True, u'size': 0}, {u'name': u'README', u'perm': u'-rw-rw-r--', u'file': True, u'time': 1266901200, u'dir': False, u'size': 388}, {u'name': u'artwork', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1120536000, u'dir': True, u'size': 0}, {u'name': u'b2g', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1396670400, u'dir': True, u'size': 0}, {u'name': u'bouncer', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1213329600, u'dir': True, u'size': 0}, {u'name': u'calendar', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1268110800, u'dir': True, u'size': 0}, {u'name': u'camino', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1218427200, u'dir': True, u'size': 0}, {u'name': u'cck', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1160971200, u'dir': True, u'size': 0}, {u'name': u'chimera', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1089432000, u'dir': True, u'size': 0}, {u'name': u'data', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1316750400, u'dir': True, u'size': 0}, {u'name': u'directory', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1182225600, u'dir': True, u'size': 0}, {u'name': u'diskimages', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1116302400, u'dir': True, u'size': 0}, {u'name': u'extensions', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1217044800, u'dir': True, u'size': 0}, {u'name': u'firebird', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1053057600, u'dir': True, u'size': 0}, {u'name': u'firefox', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1396670400, u'dir': True, u'size': 0}, {u'name': u'firefox-old-nightlies', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1333944000, u'dir': True, u'size': 0}, {u'name': u'grendel', u'perm': u'drwxrwxr-x', u'file': False, u'time': 933998400, u'dir': True, u'size': 0}, {u'name': u'jetpack', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1332216000, u'dir': True, u'size': 0}, {u'name': u'js', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1387170000, u'dir': True, u'size': 0}, {u'name': u'l10n-kits', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1098417600, u'dir': True, u'size': 0}, {u'name': u'labs', u'perm': u'drwxrwsr-x', u'file': False, u'time': 1426787520, u'dir': True, u'size': 0}, {u'name': u'metrics', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1342584000, u'dir': True, u'size': 0}, {u'name': u'minimo', u'perm': u'drwxr-sr-x', u'file': False, u'time': 1126756800, u'dir': True, u'size': 0}, {u'name': u'mobile', u'perm': u'drwxrwsr-x', u'file': False, u'time': 1396670400, u'dir': True, u'size': 0}, {u'name': u'mozilla', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1309838400, u'dir': True, u'size': 0}, {u'name': u'mozilla.org', u'perm': u'lrwxrwxrwx', u'link': u'.', u'file': True, u'time': 1158292800, u'dir': False, u'size': 1}, {u'name': u'msgsdk', u'perm': u'drwxrwxr-x', u'file': False, u'time': 904017600, u'dir': True, u'size': 0}, {u'name': u'nspr', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1026187200, u'dir': True, u'size': 0}, {u'name': u'opus', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1402632000, u'dir': True, u'size': 0}, {u'name': u'phoenix', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1032753600, u'dir': True, u'size': 0}, {u'name': u'profiles', u'perm': u'drwxrwxr-x', u'file': False, u'time': 965275200, u'dir': True, u'size': 0}, {u'name': u'seamonkey', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1341028800, u'dir': True, u'size': 0}, {u'name': u'security', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1285128000, u'dir': True, u'size': 0}, {u'name': u'spidermonkey', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1351656000, u'dir': True, u'size': 0}, {u'name': u'static-analysis', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1218600000, u'dir': True, u'size': 0}, {u'name': u'test', u'perm': u'-rw-r--r--', u'file': True, u'time': 1413777600, u'dir': False, u'size': 0}, {u'name': u'thunderbird', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1425891480, u'dir': True, u'size': 0}, {u'name': u'utilities', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1381204800, u'dir': True, u'size': 0}, {u'name': u'webtools', u'perm': u'drwxrwsr-x', u'file': False, u'time': 1430174880, u'dir': True, u'size': 0}, {u'name': u'xulrunner', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1392440400, u'dir': True, u'size': 0}, {u'name': u'zz', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1400558400, u'dir': True, u'size': 0}], 'name': u'pub', 'perm': '777', 'file': False, 'time': 0, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'.htaccess', 'perm': u'-rw-r--r--', 'file': True, 'time': 1275451200, 'dir': False, 'size': 381}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'OJI', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1023249600, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'README', 'perm': u'-rw-rw-r--', 'file': True, 'time': 1266901200, 'dir': False, 'size': 388}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'artwork', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1120536000, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'b2g', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1396670400, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'bouncer', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1213329600, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'calendar', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1268110800, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'camino', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1218427200, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'cck', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1160971200, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'chimera', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1089432000, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'data', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1316750400, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'directory', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1182225600, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'diskimages', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1116302400, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'extensions', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1217044800, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'firebird', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1053057600, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'firefox', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1396670400, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'firefox-old-nightlies', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1333944000, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'grendel', 'perm': u'drwxrwxr-x', 'file': False, 'time': 933998400, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'jetpack', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1332216000, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'js', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1387170000, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'l10n-kits', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1098417600, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'labs', 'perm': u'drwxrwsr-x', 'file': False, 'time': 1426787520, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'metrics', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1342584000, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'minimo', 'perm': u'drwxr-sr-x', 'file': False, 'time': 1126756800, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'mobile', 'perm': u'drwxrwsr-x', 'file': False, 'time': 1396670400, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'mozilla', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1309838400, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'mozilla.org', 'perm': u'lrwxrwxrwx', 'file': True, 'time': 1158292800, 'dir': False, 'size': 1}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'msgsdk', 'perm': u'drwxrwxr-x', 'file': False, 'time': 904017600, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'nspr', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1026187200, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'opus', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1402632000, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'phoenix', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1032753600, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'profiles', 'perm': u'drwxrwxr-x', 'file': False, 'time': 965275200, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'seamonkey', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1341028800, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'security', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1285128000, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'spidermonkey', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1351656000, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'static-analysis', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1218600000, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'test', 'perm': u'-rw-r--r--', 'file': True, 'time': 1413777600, 'dir': False, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'thunderbird', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1425891480, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'utilities', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1381204800, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'webtools', 'perm': u'drwxrwsr-x', 'file': False, 'time': 1430174880, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'xulrunner', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1392440400, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::Converted dictionary values
+{'files': None, 'name': u'zz', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1400558400, 'dir': True, 'size': 0}
+DEBUG::
+
+DEBUG::@@@@@@ Cache view @@@@@@@@@
+DEBUG::{'/home/skaran/CSE710/fuse_mount/dls/pub/diskimages': {'files': None, 'name': u'diskimages', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1116302400, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/.Trash': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, '/home/skaran/CSE710/fuse_mount/dls/pub/firefox-old-nightlies': {'files': None, 'name': u'firefox-old-nightlies', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1333944000, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/minimo': {'files': None, 'name': u'minimo', 'perm': u'drwxr-sr-x', 'file': False, 'time': 1126756800, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/mozilla.org': {'files': None, 'name': u'mozilla.org', 'perm': u'lrwxrwxrwx', 'file': True, 'time': 1158292800, 'dir': False, 'size': 1}, '/home/skaran/CSE710/fuse_mount/dls/.message': {'files': None, 'name': u'.message', 'perm': u'-rw-r--r--', 'file': True, 'time': 1413864000, 'dir': False, 'size': 590}, '/home/skaran/CSE710/fuse_mount/dls/pub/zz': {'files': None, 'name': u'zz', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1400558400, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/firefox': {'files': None, 'name': u'firefox', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1396670400, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/spidermonkey': {'files': None, 'name': u'spidermonkey', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1351656000, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/l10n-kits': {'files': None, 'name': u'l10n-kits', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1098417600, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/extensions': {'files': None, 'name': u'extensions', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1217044800, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/static-analysis': {'files': None, 'name': u'static-analysis', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1218600000, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/calendar': {'files': None, 'name': u'calendar', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1268110800, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/grendel': {'files': None, 'name': u'grendel', 'perm': u'drwxrwxr-x', 'file': False, 'time': 933998400, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/directory': {'files': None, 'name': u'directory', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1182225600, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/firebird': {'files': None, 'name': u'firebird', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1053057600, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/mobile': {'files': None, 'name': u'mobile', 'perm': u'drwxrwsr-x', 'file': False, 'time': 1396670400, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/bouncer': {'files': None, 'name': u'bouncer', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1213329600, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/nspr': {'files': None, 'name': u'nspr', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1026187200, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/profiles': {'files': None, 'name': u'profiles', 'perm': u'drwxrwxr-x', 'file': False, 'time': 965275200, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/': {'files': [{u'name': u'.message', u'perm': u'-rw-r--r--', u'file': True, u'time': 1413864000, u'dir': False, u'size': 590}, {u'name': u'README', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 178}, {u'name': u'index.html', u'perm': u'-rw-r--r--', u'file': True, u'time': 1398398400, u'dir': False, u'size': 384}, {u'name': u'pub', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1425620880, u'dir': True, u'size': 0}], 'name': u'/', 'perm': '777', 'file': False, 'time': 0, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/index.html': {'files': None, 'name': u'index.html', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 384}, '/home/skaran/CSE710/fuse_mount/dls/pub/chimera': {'files': None, 'name': u'chimera', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1089432000, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/.htaccess': {'files': None, 'name': u'.htaccess', 'perm': u'-rw-r--r--', 'file': True, 'time': 1275451200, 'dir': False, 'size': 381}, '/home/skaran/CSE710/fuse_mount/dls/pub/data': {'files': None, 'name': u'data', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1316750400, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/README': {'files': None, 'name': u'README', 'perm': u'-rw-rw-r--', 'file': True, 'time': 1266901200, 'dir': False, 'size': 388}, '/home/skaran/CSE710/fuse_mount/dls/pub/thunderbird': {'files': None, 'name': u'thunderbird', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1425891480, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/OJI': {'files': None, 'name': u'OJI', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1023249600, 'dir': True, 'size': 0}, u'README': {'files': None, 'name': u'README', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 178}, '/home/skaran/CSE710/fuse_mount/dls/pub/labs': {'files': None, 'name': u'labs', 'perm': u'drwxrwsr-x', 'file': False, 'time': 1426787520, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/webtools': {'files': None, 'name': u'webtools', 'perm': u'drwxrwsr-x', 'file': False, 'time': 1430174880, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/security': {'files': None, 'name': u'security', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1285128000, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/cck': {'files': None, 'name': u'cck', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1160971200, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/msgsdk': {'files': None, 'name': u'msgsdk', 'perm': u'drwxrwxr-x', 'file': False, 'time': 904017600, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/mozilla': {'files': None, 'name': u'mozilla', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1309838400, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/js': {'files': None, 'name': u'js', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1387170000, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/camino': {'files': None, 'name': u'camino', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1218427200, 'dir': True, 'size': 0}, u'pub': {'files': None, 'name': u'pub', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1425620880, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/phoenix': {'files': None, 'name': u'phoenix', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1032753600, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/b2g': {'files': None, 'name': u'b2g', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1396670400, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/seamonkey': {'files': None, 'name': u'seamonkey', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1341028800, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub': {'files': [{u'name': u'.htaccess', u'perm': u'-rw-r--r--', u'file': True, u'time': 1275451200, u'dir': False, u'size': 381}, {u'name': u'OJI', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1023249600, u'dir': True, u'size': 0}, {u'name': u'README', u'perm': u'-rw-rw-r--', u'file': True, u'time': 1266901200, u'dir': False, u'size': 388}, {u'name': u'artwork', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1120536000, u'dir': True, u'size': 0}, {u'name': u'b2g', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1396670400, u'dir': True, u'size': 0}, {u'name': u'bouncer', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1213329600, u'dir': True, u'size': 0}, {u'name': u'calendar', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1268110800, u'dir': True, u'size': 0}, {u'name': u'camino', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1218427200, u'dir': True, u'size': 0}, {u'name': u'cck', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1160971200, u'dir': True, u'size': 0}, {u'name': u'chimera', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1089432000, u'dir': True, u'size': 0}, {u'name': u'data', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1316750400, u'dir': True, u'size': 0}, {u'name': u'directory', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1182225600, u'dir': True, u'size': 0}, {u'name': u'diskimages', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1116302400, u'dir': True, u'size': 0}, {u'name': u'extensions', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1217044800, u'dir': True, u'size': 0}, {u'name': u'firebird', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1053057600, u'dir': True, u'size': 0}, {u'name': u'firefox', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1396670400, u'dir': True, u'size': 0}, {u'name': u'firefox-old-nightlies', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1333944000, u'dir': True, u'size': 0}, {u'name': u'grendel', u'perm': u'drwxrwxr-x', u'file': False, u'time': 933998400, u'dir': True, u'size': 0}, {u'name': u'jetpack', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1332216000, u'dir': True, u'size': 0}, {u'name': u'js', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1387170000, u'dir': True, u'size': 0}, {u'name': u'l10n-kits', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1098417600, u'dir': True, u'size': 0}, {u'name': u'labs', u'perm': u'drwxrwsr-x', u'file': False, u'time': 1426787520, u'dir': True, u'size': 0}, {u'name': u'metrics', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1342584000, u'dir': True, u'size': 0}, {u'name': u'minimo', u'perm': u'drwxr-sr-x', u'file': False, u'time': 1126756800, u'dir': True, u'size': 0}, {u'name': u'mobile', u'perm': u'drwxrwsr-x', u'file': False, u'time': 1396670400, u'dir': True, u'size': 0}, {u'name': u'mozilla', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1309838400, u'dir': True, u'size': 0}, {u'name': u'mozilla.org', u'perm': u'lrwxrwxrwx', u'link': u'.', u'file': True, u'time': 1158292800, u'dir': False, u'size': 1}, {u'name': u'msgsdk', u'perm': u'drwxrwxr-x', u'file': False, u'time': 904017600, u'dir': True, u'size': 0}, {u'name': u'nspr', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1026187200, u'dir': True, u'size': 0}, {u'name': u'opus', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1402632000, u'dir': True, u'size': 0}, {u'name': u'phoenix', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1032753600, u'dir': True, u'size': 0}, {u'name': u'profiles', u'perm': u'drwxrwxr-x', u'file': False, u'time': 965275200, u'dir': True, u'size': 0}, {u'name': u'seamonkey', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1341028800, u'dir': True, u'size': 0}, {u'name': u'security', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1285128000, u'dir': True, u'size': 0}, {u'name': u'spidermonkey', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1351656000, u'dir': True, u'size': 0}, {u'name': u'static-analysis', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1218600000, u'dir': True, u'size': 0}, {u'name': u'test', u'perm': u'-rw-r--r--', u'file': True, u'time': 1413777600, u'dir': False, u'size': 0}, {u'name': u'thunderbird', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1425891480, u'dir': True, u'size': 0}, {u'name': u'utilities', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1381204800, u'dir': True, u'size': 0}, {u'name': u'webtools', u'perm': u'drwxrwsr-x', u'file': False, u'time': 1430174880, u'dir': True, u'size': 0}, {u'name': u'xulrunner', u'perm': u'drwxrwxr-x', u'file': False, u'time': 1392440400, u'dir': True, u'size': 0}, {u'name': u'zz', u'perm': u'drwxr-xr-x', u'file': False, u'time': 1400558400, u'dir': True, u'size': 0}], 'name': u'pub', 'perm': '777', 'file': False, 'time': 0, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/utilities': {'files': None, 'name': u'utilities', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1381204800, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/.xdg-volume-info': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, '/home/skaran/CSE710/fuse_mount/dls/pub/metrics': {'files': None, 'name': u'metrics', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1342584000, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/artwork': {'files': None, 'name': u'artwork', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1120536000, 'dir': True, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/README': {'files': None, 'name': u'README', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 178}, '/home/skaran/CSE710/fuse_mount/dls/pub/jetpack': {'files': None, 'name': u'jetpack', 'perm': u'drwxr-xr-x', 'file': False, 'time': 1332216000, 'dir': True, 'size': 0}, u'index.html': {'files': None, 'name': u'index.html', 'perm': u'-rw-r--r--', 'file': True, 'time': 1398398400, 'dir': False, 'size': 384}, '/home/skaran/CSE710/fuse_mount/dls/.Trash-1000': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, '/home/skaran/CSE710/fuse_mount/dls/autorun.inf': {'files': None, 'name': None, 'perm': '777', 'file': None, 'time': None, 'dir': None, 'size': None}, '/home/skaran/CSE710/fuse_mount/dls/pub/xulrunner': {'files': None, 'name': u'xulrunner', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1392440400, 'dir': True, 'size': 0}, u'.message': {'files': None, 'name': u'.message', 'perm': u'-rw-r--r--', 'file': True, 'time': 1413864000, 'dir': False, 'size': 590}, '/home/skaran/CSE710/fuse_mount/dls/pub/test': {'files': None, 'name': u'test', 'perm': u'-rw-r--r--', 'file': True, 'time': 1413777600, 'dir': False, 'size': 0}, '/home/skaran/CSE710/fuse_mount/dls/pub/opus': {'files': None, 'name': u'opus', 'perm': u'drwxrwxr-x', 'file': False, 'time': 1402632000, 'dir': True, 'size': 0}}
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.message
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::.message is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.message
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::.message is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.message
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::.message is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.message
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::.message is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.message
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::.message is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.message
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::.message is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.message
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::.message is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.message
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::.message is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.message
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::.message is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.message
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::.message is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.message
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::.message is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.message
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::.message is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.message
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::.message is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.message
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::.message is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.message
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::.message is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.message
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::.message is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.message
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::.message is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.message
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::.message is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.message
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::.message is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.message
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/.message
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::.message is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::------- getattr called --------
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /.xdg-volume-info
+DEBUG::Passed path: /autorun.inf
+DEBUG::Partial starts with /
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/.xdg-volume-info
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/autorun.inf
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/.xdg-volume-info
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/autorun.inf
+DEBUG::Check if update is required
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::None is file
+DEBUG::Get stat values
+DEBUG::None is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::/ is directory
+DEBUG::----- readdir called ------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /
+DEBUG::Partial is current dir
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::file: .message is directory? False
+DEBUG::file: README is directory? False
+DEBUG::file: index.html is directory? False
+DEBUG::file: pub is directory? True
+DEBUG::Dirents list: ['.', '..', u'.message', u'README', u'index.html', u'pub']
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /index.html
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/index.html
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::index.html is file
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /pub
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/pub
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::pub is directory
+DEBUG::------- getattr called --------
+DEBUG::------- Full path called --------
+DEBUG::Passed path: /README
+DEBUG::Partial starts with /
+DEBUG::Create full os path
+DEBUG::Full path: /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::------ cache Hit for /home/skaran/CSE710/fuse_mount/dls/README
+DEBUG::Check if update is required
+DEBUG::Update not required
+DEBUG::vaule update_cache done
+DEBUG::Get stat values
+DEBUG::README is file
